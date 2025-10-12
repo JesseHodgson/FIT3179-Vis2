@@ -217,8 +217,8 @@ Africa,AF,"South Africa, Republic of",ZA,ZAF,710
 Africa,AF,"Zimbabwe, Republic of",ZW,ZWE,716
 Europe,EU,"Spain, Kingdom of",ES,ESP,724
 Africa,AF,South Sudan,SS,SSD,728
+Africa,AF,"Sudan, Republic of",SD,SDN,729
 Africa,AF,Western Sahara,EH,ESH,732
-Africa,AF,"Sudan, Republic of",SD,SDN,736
 South America,SA,"Suriname, Republic of",SR,SUR,740
 Europe,EU,Svalbard & Jan Mayen Islands,SJ,SJM,744
 Africa,AF,"Swaziland, Kingdom of",SZ,SWZ,748
@@ -261,3 +261,4 @@ Oceania,OC,Disputed Territory,XX,,
 Asia,AS,Iraq-Saudi Arabia Neutral Zone,XE,,
 Asia,AS,United Nations Neutral Zone,XD,,
 Asia,AS,Spratly Islands,XS,,
+

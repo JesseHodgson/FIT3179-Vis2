@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 1000,
+  "height": 600,
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {"graticule": true},
+      "mark": {"type": "geoshape", "stroke": "lightblue", "strokeWidth": 0.5}
+    },
+    {
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/country-and-continent-codes-list-csv.csv",
+              "format": {"type": "csv"}
+            },
+            "key": "Country_Number",
+            "fields": ["Country_Name", "Continent_Name"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "Continent_Name",
+          "type": "nominal",
+          "title": "Continent",
+          "scale": {
+            "domain": [
+              "Africa",
+              "Asia",
+              "Europe",
+              "North America",
+              "South America",
+              "Oceania"
+            ],
+            "range": [
+              "#FFD166",
+              "#EF476F",
+              "#118AB2",
+              "#06D6A0",
+              "#073B4C",
+              "#A65E44"
+            ]
+          }
+        },
+        "tooltip": [
+          {"field": "Country_Name", "type": "nominal", "title": "Country"},
+          {"field": "Continent_Name", "type": "nominal", "title": "Continent"}
+        ]
+      }
+    },
+    {
+      "title": {"text": "Locations of the World's Volcanoes", "fontSize": 20},
+      "data": {
+        "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv",
+        "format": {"type": "csv"}
+      },
+      "mark": {"type": "circle", "color": "red", "size": 15},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "tooltip": [
+          {"field": "Volcano Name", "type": "nominal"},
+          {"field": "Country", "type": "nominal"}
+        ]
+      }
+    }
+  ],
+  "config": {"style": {"cell": {"stroke": "transparent"}}}
+}

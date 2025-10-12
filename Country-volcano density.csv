@@ -1,97 +1,97 @@
-﻿Country,Count of volcanoes
-United States,184
-Russia,169
-Indonesia,136
-Japan,111
-Chile,87
-Ethiopia,57
-Papua New Guinea,54
-Philippines,49
-Mexico,41
-Iceland,39
-Antarctica,35
-Ecuador,34
-Argentina,34
-Pacific Ocean,33
-New Zealand,30
-El Salvador,22
-Guatemala,22
-Kenya,22
-Canada,21
-Tonga,20
-Nicaragua,19
-Peru,16
-China,14
-Colombia,14
-Italy,14
-Vanuatu,14
-Portugal,14
-Turkey,13
-Atlantic Ocean,12
-Yemen,11
-Bolivia,11
-Tanzania,10
-Costa Rica,10
-Saudi Arabia,10
-Indian Ocean,9
-Spain,8
-Iran,8
-Solomon Is.,8
-Uganda,7
-Taiwan,7
-Eritrea,6
-Syria,6
-Vietnam,6
-Madagascar,5
-Chad,5
-Mongolia,5
-Greece,5
-France,5
-Sudan,5
-Cameroon,5
-Armenia,5
-Netherlands,5
-Dominica,5
-"Congo, DRC",5
-Algeria,4
-Honduras,4
-Georgia,4
-Equatorial Guinea,3
-Cape Verde,3
-North Korea,3
-Myanmar,3
-South Korea,2
-Afghanistan,2
-Comoros,2
-French Southern & Antarctic Lands,2
-Libya,2
-Panama,2
-Fiji,2
-Arctic Ocean,2
-Djibouti,2
-Samoa,2
-India,2
-Montserrat,1
-Martinique,1
-Germany,1
-American Samoa,1
-Bouvet I.,1
-Jan Mayen,1
-United Kingdom,1
-South Africa,1
-Wallis & Futuna,1
-Reunion,1
-Guadeloupe,1
-Nigeria,1
-Trinidad,1
-St. Kitts & Nevis,1
-Rwanda,1
-St. Lucia,1
-Heard I. & McDonald Is.,1
-St. Vincent & the Grenadines,1
-Australia,1
-Malaysia,1
-Sao Tome & Principe,1
-Mali,1
-Grenada,1
-Grand Total,1571
+﻿Country,Count of volcanoes,Land Area (km²)
+United States,184,"9,833,517"
+Russia,169,"17,098,246"
+Indonesia,136,"1,904,569"
+Japan,111,"377,975"
+Chile,87,"756,102"
+Ethiopia,57,"1,104,300"
+Papua New Guinea,54,"462,840"
+Philippines,49,"300,000"
+Mexico,41,"1,964,375"
+Iceland,39,"103,000"
+Antarctica,35,"14,000,000"
+Ecuador,34,"276,841"
+Argentina,34,"2,780,400"
+Pacific Ocean,33,"165,250,000"
+New Zealand,30,"268,838"
+El Salvador,22,"21,041"
+Guatemala,22,"108,889"
+Kenya,22,"580,367"
+Canada,21,"9,984,670"
+Tonga,20,747
+Nicaragua,19,"130,373"
+Peru,16,"1,285,216"
+China,14,"9,596,961"
+Colombia,14,"1,141,748"
+Italy,14,"301,340"
+Vanuatu,14,"12,189"
+Portugal,14,"92,090"
+Turkey,13,"783,562"
+Atlantic Ocean,12,"106,460,000"
+Yemen,11,"527,968"
+Bolivia,11,"1,098,581"
+Tanzania,10,"947,303"
+Costa Rica,10,"51,100"
+Saudi Arabia,10,"2,149,690"
+Indian Ocean,9,"70,560,000"
+Spain,8,"505,992"
+Iran,8,"1,648,195"
+Solomon Is.,8,"28,900"
+Uganda,7,"241,038"
+Taiwan,7,"36,197"
+Eritrea,6,"117,600"
+Syria,6,"185,180"
+Vietnam,6,"331,212"
+Madagascar,5,"587,041"
+Chad,5,"1,284,000"
+Mongolia,5,"1,564,116"
+Greece,5,"131,957"
+France,5,"551,695"
+Sudan,5,"1,886,068"
+Cameroon,5,"475,442"
+Armenia,5,"29,743"
+Netherlands,5,"41,543"
+Dominica,5,751
+"Congo, DRC",5,"2,344,858"
+Algeria,4,"2,381,741"
+Honduras,4,"112,492"
+Georgia,4,"69,700"
+Equatorial Guinea,3,"28,051"
+Cape Verde,3,"4,033"
+North Korea,3,"120,538"
+Myanmar,3,"676,578"
+South Korea,2,"100,210"
+Afghanistan,2,"652,230"
+Comoros,2,"2,235"
+French Southern & Antarctic Lands,2,"439,781"
+Libya,2,"1,759,540"
+Panama,2,"75,417"
+Fiji,2,"18,274"
+Arctic Ocean,2,"14,060,000"
+Djibouti,2,"23,200"
+Samoa,2,"2,842"
+India,2,"3,287,263"
+Montserrat,1,102
+Martinique,1,"1,128"
+Germany,1,"357,022"
+American Samoa,1,199
+Bouvet I.,1,49
+Jan Mayen,1,377
+United Kingdom,1,"243,610"
+South Africa,1,"1,221,037"
+Wallis & Futuna,1,142
+Reunion,1,"2,512"
+Guadeloupe,1,"1,628"
+Nigeria,1,"923,768"
+Trinidad,1,"5,128"
+St. Kitts & Nevis,1,261
+Rwanda,1,"26,338"
+St. Lucia,1,617
+Heard I. & McDonald Is.,1,372
+St. Vincent & the Grenadines,1,389
+Australia,1,"7,692,024"
+Malaysia,1,"330,803"
+Sao Tome & Principe,1,964
+Mali,1,"1,240,192"
+Grenada,1,344
+Grand Total,1571,

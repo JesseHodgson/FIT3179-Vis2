@@ -196,7 +196,7 @@ Alaska,1105-021,Gordon,United States,Alaska-E,62.13,-143.08,2755,Cinder cone,Hol
 Alaska,1105-01-,Sanford,United States,Alaska-E,62.22,-144.13,4949,Shield volcano,Holocene,Unknown
 Alaska,1105-02-,Wrangell,United States,Alaska-E,62.006,-144.017,4278,Shield volcano,Historical,D2
 Alaska,1105-07-,Behm Canal-Rudyerd Bay,United States,Alaska-SE,55.32,-131.05,500,Cinder cone,Holocene,Unknown
-Alaska,1105-05-,Duncan Canal,United States,Alaska-SE,56.5,-133.1,15,Unknown,Holocene,U
+Alaska,1105-05-,Duncan Canal,United States,Alaska-SE,56.5,-133.1,15,Volcanic Field,Holocene,U
 Alaska,1105-04-,Edgecumbe,United States,Alaska-SE,57.05,-135.75,970,Stratovolcano,Radiocarbon,D7
 Alaska,1105-06-,Tlevak Strait-Suemez Is.,United States,Alaska-SE,55.25,-133.3,50,Volcanic field,Holocene,U
 Alaska,1103-01-,Augustine,United States,Alaska-SW,59.363,-153.43,1252,Lava dome,Historical,D1
@@ -1570,4 +1570,5 @@ Mediterranean and West Asia,0103-03=,Tenduruk Dagi,Turkey,Turkey,39.356,43.874,3
  Melanesia and Australia,0507-01=,Suretamatai,Vanuatu,Vanuatu-SW Pacific,-13.8,167.47,921,Complex volcano,Historical,D1
  Melanesia and Australia,0507-09=,Traitor's Head,Vanuatu,Vanuatu-SW Pacific,-18.754,169.238,817,Stratovolcano,Historical,D3
  Melanesia and Australia,0507-10=,Yasur,Vanuatu,Vanuatu-SW Pacific,-19.532,169.447,361,Stratovolcano,Historical,D1
+
 

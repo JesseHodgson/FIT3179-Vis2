@@ -424,7 +424,7 @@ Antarctica,1900-13=,Zavodovski,Antarctica,Antarctica,-56.3,-27.57,551,Stratovolc
  Hawaii and Pacific Ocean,1301-04-,Escanaba Segment,Pacific Ocean,Pacific-NE,40.98,-127.5,-1700,Submarine volcano,Uranium-series,D7
  Hawaii and Pacific Ocean,1301-031,North Gorda Ridge Segment,Pacific Ocean,Pacific-NE,42.67,-126.78,-3000,Submarine volcano,Historical,D2
  Hawaii and Pacific Ocean,1301-03-,Unnamed,Pacific Ocean,Pacific-NE,31.75,-124.25,-2533,Submarine volcano,Uncertain,Unknown
- Hawaii and Pacific Ocean,1301-05-,Unnamed,Pacific Ocean,Pacific-NE,31.75,-124.25,-2533,Submarine volcano?,Uncertain,?
+ Hawaii and Pacific Ocean,1301-05-,Unnamed,Pacific Ocean,Pacific-NE,31.75,-124.25,-2533,Submarine volcano,Uncertain,?
  Hawaii and Pacific Ocean,1305-01-,Antipodes Island,New Zealand,Pacific-S,-49.683,178.767,402,Pyroclastic cones,Holocene?,?
  Hawaii and Pacific Ocean,1305-02-,Hollister Ridge,Pacific Ocean,Pacific-S,-53.998,-139.845,-1000,Submarine volcano,Uncertain,?
  Hawaii and Pacific Ocean,1305-03-,Udintsev Transform,Pacific Ocean,Pacific-S,-56.153,-143.373,-5700,Submarine volcano,Uncertain,?
@@ -975,7 +975,7 @@ Kamchatka and Mainland Asia,1002-04-,Vitim Volcanic Field,Russia,Russia-SE,53.75
  South America,1506-03=,Unnamed,Chile,Chile-Is,-33.622,-78.78,0,Submarine volcano,Historical,D3
  South America,1505-122,"Bayo Gorbea, Cerro",Argentina,Chile-N,-25.414,-68.588,5413,Complex volcano,Holocene,U
  South America,1505-121,Cordon del Azufre,Argentina,Chile-N,-25.336,-68.521,5481,Complex volcano,Holocene,U
- South America,1505-112,Corrida de Cori Volcanic Field,Argentina,Chile-N,-25.083,-68.367,5451,Stratovolcano,Holocene,U
+ South America,1505-112,Corrida de Cori Volcanic field,Argentina,Chile-N,-25.083,-68.367,5451,Stratovolcano,Holocene,U
  South America,1505-11=,Llullaillaco,Argentina,Chile-N,-24.72,-68.53,6739,Stratovolcano,Historical,D3
  South America,1505-13=,"Ojos del Salado, Nevados",Argentina,Chile-N,-27.109,-68.541,6879,Stratovolcano,Holocene,U
  South America,1505-108,Socompa,Argentina,Chile-N,-24.396,-68.246,6031,Stratovolcano,Radiocarbon,D7
@@ -1570,5 +1570,6 @@ Mediterranean and West Asia,0103-03=,Tenduruk Dagi,Turkey,Turkey,39.356,43.874,3
  Melanesia and Australia,0507-01=,Suretamatai,Vanuatu,Vanuatu-SW Pacific,-13.8,167.47,921,Complex volcano,Historical,D1
  Melanesia and Australia,0507-09=,Traitor's Head,Vanuatu,Vanuatu-SW Pacific,-18.754,169.238,817,Stratovolcano,Historical,D3
  Melanesia and Australia,0507-10=,Yasur,Vanuatu,Vanuatu-SW Pacific,-19.532,169.447,361,Stratovolcano,Historical,D1
+
 
 

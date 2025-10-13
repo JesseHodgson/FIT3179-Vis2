@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Scatterplot of volcano density (land area vs number of volcanoes).",
+  "title": {"text": "Volcano density of each country.","fontSize": 20},
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/main/Country-volcano%20density.csv",
+    "format": {"type": "csv"}
+  },
+  "width": 700,
+  "height": 500,
+  "mark": {"type": "circle", "size": 80, "opacity": 0.8},
+  "encoding": {
+    "x": {
+      "field": "Land Area (km²)",
+      "type": "quantitative",
+      "title": "Land Area (km²)",
+      "scale": {"type": "log"}
+    },
+    "y": {
+      "field": "Count of volcanoes",
+      "type": "quantitative",
+      "title": "Number of Volcanoes",
+      "scale": {"nice": true}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Land Area (km²)", "type": "quantitative"},
+      {"field": "Count of volcanoes", "type": "quantitative"}
+    ]
+  }
+}

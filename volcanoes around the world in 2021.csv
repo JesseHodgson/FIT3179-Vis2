@@ -180,7 +180,7 @@ Alaska,1102-18-,Novarupta,United States,Alaska Peninsula,58.27,-155.157,841,Cald
 Alaska,1102-03-,Pavlof,United States,Alaska Peninsula,55.417,-161.894,2493,Stratovolcano,Historical,D1
 Alaska,1102-04-,Pavlof Sister,United States,Alaska Peninsula,55.457,-161.854,2142,Stratovolcano,Historical,D4
 Alaska,1102-20-,Snowy Mountain,United States,Alaska Peninsula,58.336,-154.682,2162,Stratovolcano,Fumarolic,U
-Alaska,1102-22-,Steller,United States,Alaska Peninsula,58.43,-154.4,2272,Unknown,Uncertain,Unknown
+Alaska,1102-22-,Steller,United States,Alaska Peninsula,58.43,-154.4,2272,Stratovolcano,Uncertain,Unknown
 Alaska,1102-051,Stepovak Bay 2,United States,Alaska Peninsula,55.913,-160.041,1323,Cinder cone,Holocene,U
 Alaska,1102-052,Stepovak Bay 3,United States,Alaska Peninsula,55.929,-160.002,1555,Cinder cone,Holocene?,?
 Alaska,1102-053,Stepovak Bay 4,United States,Alaska Peninsula,55.954,-159.954,1557,Stratovolcano,Pleistocene,P
@@ -1570,3 +1570,4 @@ Mediterranean and West Asia,0103-03=,Tenduruk Dagi,Turkey,Turkey,39.356,43.874,3
  Melanesia and Australia,0507-01=,Suretamatai,Vanuatu,Vanuatu-SW Pacific,-13.8,167.47,921,Complex volcano,Historical,D1
  Melanesia and Australia,0507-09=,Traitor's Head,Vanuatu,Vanuatu-SW Pacific,-18.754,169.238,817,Stratovolcano,Historical,D3
  Melanesia and Australia,0507-10=,Yasur,Vanuatu,Vanuatu-SW Pacific,-19.532,169.447,361,Stratovolcano,Historical,D1
+

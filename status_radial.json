@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv"
+  },
+  "mark": {"type": "arc", "innerRadius": 65}, 
+  "encoding": {
+    "theta": {"aggregate": "count", "field": "Status", "type": "quantitative", "title": "Number of Volcanoes"},
+    "color": {"field": "Status", "type": "nominal", "title": "Volcano Stauts"},
+    "order": {
+      "aggregate": "count",
+      "field": "Status",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {"field": "Status", "type": "nominal", "title": "Volcano Status"},
+      {"aggregate": "count", "type": "quantitative", "title": "Number of Volcanoes"}
+    ]
+  },
+  "view": {"stroke": null},
+  "title": "Number of Volcanoes Belonging to Each Status"
+}

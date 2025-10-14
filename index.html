@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.2"></script>
+
+    <style media="screen">
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #fafafa;
+      }
+      .vega-actions a {
+        margin-right: 5px;
+      }
+      h1, h2 {
+        text-align: center;
+      }
+      .chart {
+        margin: 50px auto;
+        width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Week 9 Homework Assignment</h1>
+
+    <!-- Visualization containers -->
+    <div id="vis1" class="chart"></div>
+    <div id="vis2" class="chart"></div>
+    <div id="vis3" class="chart"></div>
+    <div id="vis4" class="chart"></div>
+    <div id="vis5" class="chart"></div>
+    <div id="vis6" class="chart"></div>
+    <div id="vis7" class="chart"></div>
+    <div id="vis8" class="chart"></div>
+
+    <script>
+      // --- Visualization 1 (World Volcano Map) ---
+      var vlSpec1 = {
+        
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 1000,
+  "height": 600,
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {"graticule": true},
+      "mark": {"type": "geoshape", "stroke": "lightblue", "strokeWidth": 0.5}
+    },
+    {
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/country-and-continent-codes-list-csv.csv",
+              "format": {"type": "csv"}
+            },
+            "key": "Country_Number",
+            "fields": ["Country_Name", "Continent_Name"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "Continent_Name",
+          "type": "nominal",
+          "title": "Continent",
+          "scale": {
+            "domain": [
+              "Africa",
+              "Asia",
+              "Europe",
+              "North America",
+              "South America",
+              "Oceania"
+            ],
+            "range": [
+              "#FFD166",
+              "#EF476F",
+              "#118AB2",
+              "#06D6A0",
+              "#073B4C",
+              "#A65E44"
+            ]
+          }
+        },
+        "tooltip": [
+          {"field": "Country_Name", "type": "nominal", "title": "Country"},
+          {"field": "Continent_Name", "type": "nominal", "title": "Continent"}
+        ]
+      }
+    },
+    {
+      "title": {"text": "Locations of the World's Volcanoes", "fontSize": 20},
+      "data": {
+        "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv",
+        "format": {"type": "csv"}
+      },
+      "mark": {"type": "circle", "color": "red", "size": 15},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "tooltip": [
+          {"field": "Volcano Name", "type": "nominal"},
+          {"field": "Country", "type": "nominal"}
+        ]
+      }
+    }
+  ],
+  "config": {"style": {"cell": {"stroke": "transparent"}}}
+};
+
+      var vlSpec2 = 
+      { "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 1000,
+  "height": 600,
+  "projection": {"type": "albersUsa"},
+  "title": {"text": "Volcanoes in the United States", "fontSize": 20},
+  "layer": [
+    {
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/us-10m.json",
+        "format": {"type": "topojson", "feature": "states"}
+      },
+      "mark": {"type": "geoshape", "fill": "#0698d65d", "stroke": "black"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {"filter": "datum.Country == 'United States'"}
+      ],
+      "mark": {"type": "circle", "size": 40, "opacity": 0.8, "stroke": "black", "strokeWidth": 0.5},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "color": {
+          "field": "Type",
+          "type": "nominal",
+          "title": "Volcano Type",
+          "legend": {"orient": "right"}
+        },
+        "tooltip": [
+          {"field": "Volcano Name", "type": "nominal", "title": "Volcano"},
+          {"field": "Type", "type": "nominal", "title": "Type"},
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Location", "type": "nominal", "title": "Location"}
+        ]
+      }
+    }
+  ],
+  "config": {"style": {"cell": {"stroke": "transparent"}}}
+ };
+      var vlSpec3 = { 
+"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv"
+  },
+  "mark": {"type": "arc", "innerRadius": 65}, 
+  "encoding": {
+    "theta": {"aggregate": "count", "field": "Type", "type": "quantitative", "title": "Number of Volcanoes"},
+    "color": {"field": "Type", "type": "nominal", "title": "Volcano Type"},
+    "order": {
+      "aggregate": "count",
+      "field": "Type",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {"field": "Type", "type": "nominal", "title": "Volcano Type"},
+      {"aggregate": "count", "type": "quantitative", "title": "Number of Volcanoes"}
+    ]
+  },
+  "view": {"stroke": null},
+  "title": "Number of Volcanoes Belonging to Each Type"
+       };
+      var vlSpec4 = { 
+"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv"
+  },
+  "mark": {"type": "arc", "innerRadius": 65}, 
+  "encoding": {
+    "theta": {"aggregate": "count", "field": "Status", "type": "quantitative", "title": "Number of Volcanoes"},
+    "color": {"field": "Status", "type": "nominal", "title": "Volcano Stauts"},
+    "order": {
+      "aggregate": "count",
+      "field": "Status",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {"field": "Status", "type": "nominal", "title": "Volcano Status"},
+      {"aggregate": "count", "type": "quantitative", "title": "Number of Volcanoes"}
+    ]
+  },
+  "view": {"stroke": null},
+  "title": "Number of Volcanoes Belonging to Each Status"
+       };
+      var vlSpec5 = { 
+"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {"url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv"},
+  "mark": "rect",
+  "encoding": {
+    "x": {"field": "Type", "type": "nominal"},
+    "y": {"field": "Status", "type": "nominal"},
+    "color": {"aggregate": "count", "title": "Number of Volcanoes"},
+    "tooltip": [
+      {"field": "Type"},
+      {"field": "Status"},
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Number of Volcanoes"
+      }
+    ]
+  },
+  "title": "Relationship Between the Type & Status of All Volcanoes"
+       };
+      var vlSpec6 = { 
+"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Scatterplot of volcano density (land area vs number of volcanoes).",
+  "title": {"text": "Volcano density of each country.","fontSize": 20},
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/main/Country-volcano%20density.csv",
+    "format": {"type": "csv"}
+  },
+  "width": 700,
+  "height": 500,
+  "mark": {"type": "circle", "size": 80, "opacity": 0.8},
+  "encoding": {
+    "x": {
+      "field": "Land Area (km²)",
+      "type": "quantitative",
+      "title": "Land Area (km²)",
+      "scale": {"type": "log"}
+    },
+    "y": {
+      "field": "Count of volcanoes",
+      "type": "quantitative",
+      "title": "Number of Volcanoes",
+      "scale": {"nice": true}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Land Area (km²)", "type": "quantitative"},
+      {"field": "Count of volcanoes", "type": "quantitative"}
+    ]
+  }
+       };
+      var vlSpec7 = { 
+"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {"text": "Explosivity of Each Type of Volcano's Eruption over Recorded History","fontSize": 20},
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcano-events.csv"
+  },
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "axis": {"grid": true}
+    },
+    "y": {"field": "Type", "type": "nominal", "axis": {"title": ""}},
+    "size": {
+      "field": "VEI",
+      "type": "quantitative",
+      "title": "Volcanic Explosivity Index",
+      "scale": {"type": "pow", "exponent": 6, "range": [10, 1500]}
+    },
+    "color": {"field": "Type", "type": "nominal", "legend": null},
+    "tooltip": [
+      {"field": "Name", "type": "nominal"},
+      {"field": "Country", "type": "nominal"},
+      {"field": "Year", "type": "nominal"},
+      {"field": "VEI", "type": "nominal"}
+    ]
+  }
+       };
+      var vlSpec8 = { 
+"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {"text": "Explosivity of Each Type of Volcano's Eruption in the last 100 years","fontSize": 20},
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcano-events.csv"
+  },
+  "transform": [
+    {"filter": "datum.Year >= 1924"}
+  ],
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "axis": {"grid": true},
+      "scale": {"domain": [1924, 2024]}
+    },
+    "y": {"field": "Type", "type": "nominal", "axis": {"title": ""}},
+    "size": {
+      "field": "VEI",
+      "type": "quantitative",
+      "title": "Volcanic Explosivity Index",
+      "scale": {"type": "pow", "exponent": 3, "range": [10, 1500]}
+    },
+    "color": {"field": "Type", "type": "nominal", "legend": null},
+    "tooltip": [
+      {"field": "Name", "type": "nominal"},
+      {"field": "Country", "type": "nominal"},
+      {"field": "Year", "type": "nominal"},
+      {"field": "VEI", "type": "nominal"}
+    ]
+  }
+       };
+
+      // --- Embed all visualizations ---
+      vegaEmbed('#vis1', vlSpec1);
+      vegaEmbed('#vis2', vlSpec2);
+      vegaEmbed('#vis3', vlSpec3);
+      vegaEmbed('#vis4', vlSpec4);
+      vegaEmbed('#vis5', vlSpec5);
+      vegaEmbed('#vis6', vlSpec6);
+      vegaEmbed('#vis7', vlSpec7);
+      vegaEmbed('#vis8', vlSpec8);
+    </script>
+  </body>
+</html>

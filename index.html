@@ -3,9 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IFSC World Cups 2015–2021 | Visualisation</title>
+  <title>Volcanoes Around the World</title>
 
-  <!-- Vega libraries -->
+  <!-- Pure CSS (base + grids + responsive) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+
+  <!-- Vega libs -->
   <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
@@ -14,15 +19,14 @@
     body {
       font-family: "Segoe UI", Roboto, sans-serif;
       margin: 0;
-      background: #fafafa url('https://i.imgur.com/sjSnq9O.png'); /* optional confetti bg */
-      background-size: 100px;
+      background: #fafafa;
+      color: #333;
     }
-
-    .container {
+    .wrapper {
       max-width: 1100px;
       margin: 0 auto;
+      padding: 2rem 1rem;
       background: white;
-      padding: 40px 60px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
 
@@ -30,134 +34,213 @@
       text-align: center;
       margin-bottom: 2rem;
     }
-
     header h1 {
-      color: #0077b6;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.3em;
+      color: #005a87;
     }
-
-    header h2 {
-      font-weight: normal;
+    header p {
       color: #555;
     }
 
     section {
-      margin: 3rem 0;
+      margin-bottom: 3rem;
     }
-
     section h3 {
+      margin-bottom: 1rem;
       border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 0.3em;
-      color: #333;
+      padding-bottom: 0.5rem;
+      color: #444;
     }
 
-    .chart-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 1.5rem;
+    .chart-unit {
+      /* add padding so charts / text are not flush to edges */
+      box-sizing: border-box;
+      padding: 0.5rem;
     }
 
     .chart {
-      flex: 1 1 450px;
-      min-width: 350px;
+      /* minimum height so placeholder shows up */
+      min-height: 300px;
     }
 
-    p {
-      color: #444;
+    .text-unit {
       line-height: 1.6;
+      color: #444;
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #777;
-      padding-top: 2rem;
       border-top: 1px solid #eee;
+      padding-top: 1.5rem;
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
+  <div class="wrapper">
     <header>
-      <h1>IFSC World Cups 2015–2021</h1>
-      <h2>Competitive Sport Climbing</h2>
-      <p>
-        This visualisation presents data from the official IFSC website, showing locations of competitions, competitors, and athlete rankings from 2015–2021.
+      <h1>Volcanoes Around the World</h1>
+      <h2>Visualising statistics about respective volcanoes from aorund the world from 2021.</h2>
+      <p>This webpage goes over the important statistics about volcnaoes around the world, so that you can hopefully learn something about them,
+        and become more knowledgeable about the natural world around us. 
       </p>
     </header>
 
-    <!-- Section 1 -->
-    <section id="locations">
-      <h3>Locations</h3>
-      <div class="chart-row">
-        <div id="vis1" class="chart"></div>
-        <div class="chart-text">
+    <!-- Section: Locations -->
+    <section id="Location Info">
+      <h3>Where are the World's Volcanoes?</h3>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-2-3 chart-unit">
+          <div id="main_map" class="chart"></div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3 chart-unit text-unit">
           <p>
-            The map below shows where World Cups were hosted across the globe. Larger circles represent multiple events in the same location.
+            This is a text placeholder.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Section 2 -->
+    <!-- Section: Competitors -->
     <section id="competitors">
-      <h3>Competitors</h3>
-      <div class="chart-row">
-        <div id="vis2" class="chart"></div>
-        <div id="vis3" class="chart"></div>
+      <h3>Heading placeholder.</h3>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+          <div id="vis2" class="chart"></div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+          <div id="vis3" class="chart"></div>
+        </div>
       </div>
-      <p>
-        Gender and regional participation trends show the growth of competitive climbing since 2015.
-      </p>
+      <div class="pure-g">
+        <div class="pure-u-1 chart-unit text-unit">
+          <p>
+            This is a text placeholder.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Section 3 -->
+    <!-- Section: Rankings -->
     <section id="rankings">
       <h3>Rankings</h3>
-      <div class="chart-row">
-        <div id="vis4" class="chart"></div>
-        <div class="chart-text">
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+          <div id="vis4" class="chart"></div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 chart-unit text-unit">
           <p>
-            Rankings summarize athletes’ performances each year. Hover over bars to view scores and placements.
+            This bar chart shows accumulated points and rankings per athlete or country.
           </p>
         </div>
       </div>
-
-      <div class="chart-row">
-        <div id="vis5" class="chart"></div>
-        <div id="vis6" class="chart"></div>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+          <div id="vis5" class="chart"></div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+          <div id="vis6" class="chart"></div>
+        </div>
       </div>
     </section>
 
+    <!-- Section: Summary / Trends -->
     <section id="summary">
       <h3>Summary & Trends</h3>
-      <div class="chart-row">
-        <div id="vis7" class="chart"></div>
-        <div id="vis8" class="chart"></div>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+          <div id="vis7" class="chart"></div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+          <div id="vis8" class="chart"></div>
+        </div>
       </div>
     </section>
 
     <footer>
-      <p>Want to learn more? Watch IFSC competitions on the <a href="#">IFSC YouTube Channel</a>.</p>
+      <p>This is a footer placeholder.</p>
     </footer>
   </div>
 
-  <!-- Placeholder Vega-Lite JSON specs -->
   <script>
-    const placeholder = {
+    // placeholder Vega-Lite spec
+    const main_map = {
       "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-      "description": "Placeholder chart",
-      "data": {"values": [{"a": "A", "b": 28}, {"a": "B", "b": 55}]},
-      "mark": "bar",
+  "width": 1000,
+  "height": 600,
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {"graticule": true},
+      "mark": {"type": "geoshape", "stroke": "lightblue", "strokeWidth": 0.5}
+    },
+    {
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/country-and-continent-codes-list-csv.csv",
+              "format": {"type": "csv"}
+            },
+            "key": "Country_Number",
+            "fields": ["Country_Name", "Continent_Name"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
       "encoding": {
-        "x": {"field": "a", "type": "nominal"},
-        "y": {"field": "b", "type": "quantitative"}
+        "color": {
+          "field": "Continent_Name",
+          "type": "nominal",
+          "title": "Continent",
+          "scale": {
+            "domain": [
+              "Africa",
+              "Asia",
+              "Europe",
+              "North America",
+              "South America",
+              "Oceania"
+            ],
+            "range": [
+              "#FFD166",
+              "#EF476F",
+              "#118AB2",
+              "#06D6A0",
+              "#073B4C",
+              "#A65E44"
+            ]
+          }
+        }
       }
+    },
+    {
+      "title": {"text": "Locations of the World's Volcanoes", "fontSize": 20},
+      "data": {
+        "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv",
+        "format": {"type": "csv"}
+      },
+      "mark": {"type": "circle", "color": "red", "size": 15},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "tooltip": [
+          {"field": "Volcano Name", "type": "nominal"},
+          {"field": "Country", "type": "nominal"}
+        ]
+      }
+    }
+  ],
+  "config": {"style": {"cell": {"stroke": "transparent"}}}
     };
 
-    vegaEmbed('#vis1', placeholder);
+    vegaEmbed('#vis1', main_map);
     vegaEmbed('#vis2', placeholder);
     vegaEmbed('#vis3', placeholder);
     vegaEmbed('#vis4', placeholder);

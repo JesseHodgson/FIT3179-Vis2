@@ -19,8 +19,11 @@
     body {
       font-family: "Segoe UI", Roboto, sans-serif;
       margin: 0;
-      background: #fafafa;
-      color: #333;
+      background-image: url('https://github.com/JesseHodgson/FIT3179-Vis2/blob/main/Lava-Volcano-Clipart-edit-online.png?raw=true');
+      background-repeat: repeat;
+      background-size: 378px;
+      background-attachment: fixed;
+      color: #782525;
     }
     .wrapper {
       max-width: 1100px;
@@ -55,11 +58,12 @@
     .chart-unit {
       /* add padding so charts / text are not flush to edges */
       box-sizing: border-box;
-      padding: 0.5rem;
+      padding: 1rem;
     }
 
     .chart {
-      /* minimum height so placeholder shows up */
+      width: 100%;
+      height: auto;
       min-height: 300px;
     }
 
@@ -77,98 +81,202 @@
     }
   </style>
 </head>
+
+
 <body>
   <div class="wrapper">
     <header>
-      <h1>Volcanoes Around the World</h1>
-      <h2>Visualising statistics about respective volcanoes from aorund the world from 2021.</h2>
-      <p>This webpage goes over the important statistics about volcnaoes around the world, so that you can hopefully learn something about them,
+      <h1>
+        Volcanoes Around the World
+      </h1>
+      <h2>
+        Visualising statistics about respective volcanoes from aorund the world from 2021.
+      </h2>
+      <p>
+        This webpage goes over the important statistics about volcnaoes around the world, so that you can hopefully learn something about them,
         and become more knowledgeable about the natural world around us. 
+      </p>
+      <p>
+        The domain of this visualisation is volcanic data including eruption, type, status, location, and density statistics. 
+      </p>
+      <p>
+        The who of this visualisation are the people that dont know alot abaout volcanoes, and dont have a scientific background.
+      </p>
+      <p>
+        The what of this visualisation is representing my domain to show people how they all relate in a way that is easy to grasp, and hopefully interesting to learn 
+        about.
+      </p>
+      <p>
+        The why of this visualisation is to make this data understandable for the everyday person, and for people to learn about how interesting volcanoes are.
       </p>
     </header>
 
-    <!-- Section: Locations -->
+
     <section id="Location Info">
       <h3>Where are the World's Volcanoes?</h3>
       <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-2-3 chart-unit">
-          <div id="main_map" class="chart"></div>
+        <div class="pure-u-1 chart-unit">
+          <div id="vis1" class="chart"></div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-3 chart-unit text-unit">
-          <p>
-            This is a text placeholder.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: Competitors -->
-    <section id="competitors">
-      <h3>Heading placeholder.</h3>
-      <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
-          <div id="vis2" class="chart"></div>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
-          <div id="vis3" class="chart"></div>
-        </div>
-      </div>
-      <div class="pure-g">
         <div class="pure-u-1 chart-unit text-unit">
           <p>
-            This is a text placeholder.
+            Throughout the planet, whether above land, or under the waves, you can find a volcano if you look for long enough.
+            Sure enough, there's alot; over recorded history, we have data from a little more than 1500 volcanoes from aorund the planet.
+            For an untrained eye, it may look like there is no rhyme or reason to where these volcanoes appear, however, the majority of 
+            volcanoes appear on or around a tectonic fault line. 
+          </p>
+          <p>
+            This is becasue at the joints of two tectonic plates, in many cases, one 
+            plate sinks below the other one, forcing magma from below the surface of the Earth to burst through the mantle, and violently 
+            release their energy by spewing their magma all around.
+          </p>
+          <p>
+            The above diagram graph shows the locations of the worlds volcanoes, marked with red dots on the map, and each contininent 
+            is coloured to show how many volcanoes are in each continent. North America has some of the most volcanoes in the world, largely 
+            due to the fact that it sits on the edge of the pacific plate in line with what is commonly called "The Ring of Fire", which 
+            is the ring-shaped volcano system along the rim of the Pacific Plate.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Section: Rankings -->
-    <section id="rankings">
-      <h3>Rankings</h3>
+
+    <section id="America">
+      <h3>Where can we see the most volcanoes?</h3>
       <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+        <div class="pure-u-1-2 chart-unit">
+          <div id="vis2" class="chart"></div>
+        </div>
+        <div class="pure-u-1-2 chart-unit text-unit">
+          <p>
+            America is the country with the single most volcanoes in it, with a whopping 205 volcanoes amongst all it's states. The state with the most number 
+            volcanoes is Alaska, followed far behind by California, and then Oregon. Alaska is carrying the mantle greatly, as it has 141 of the 205 volcanoes in 
+            the country, which would make it the country with the 3rd most volcanoes in it on its own.
+          </p>
+          <p>
+            From looking at the choropleth on the left, we can see a clear pattern of volcanoes om the western states. This is because the west side of the 
+            country is on the Ring of Fire, making it more likely that we are to see this pattern of volcaneos appearing where they do.
+          </p>
+        </div>
+        <div class="pure-u-1-2 chart-unit">
+          <div id="vis3" class="chart"></div>
+        </div>
+        <div class="pure-u-1-2 text-unit">
+          <p>
+           The density graph on the bottom-left show the relationship between land area, and number of volcanoes. From the graph we can see that there is some 
+           correlation to these two attributes, such as USA, Russia, and Indonesia; they have a large land area, and a large number of volcanoes. 
+          </p>
+          <p>
+           However, there are more exceptions than direct correlations. Antarctica, Canada, China, Australia. All have a large landmass, yet have no more than 35 
+           volcanoes respectively. The key to how many volcanoes a country has, is directly related to where the country is. That is; if a country is where two 
+           tectonic plates meet eachother.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="Type & Status">
+      <h3>What type of volcanoes are around us, and what is their status?</h3>
+      <div class="pure-g">
+        <div class="pure-u-1 chart-unit">
           <div id="vis4" class="chart"></div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 chart-unit text-unit">
+        <div class="pure-u-1 chart-unit text-unit">
           <p>
-            This bar chart shows accumulated points and rankings per athlete or country.
+            Volcanos have a type and a status associated with them. Thiss heatmap plots the relationship between the type and status of volcanoes, and 
+            shows the cumulative number of volcanoes with a distinct type and status associated with it. 
           </p>
         </div>
       </div>
       <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+        <div class="pure-u-10-24 chart-unit">
           <div id="vis5" class="chart"></div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+        <div class="pure-u-14-24 chart-unit text-unit">
+          <p>
+            The type of a volcano denotes a volcaneos shape, size, and eruption style. Each type of volcano is created in a specific way, and some are 
+            more common than others.
+          </p>
+          <p>
+            For example, from this radial chart, we have the most common types of volcanoes going in a clockwise direction from the top. From this we can 
+            see that Stratovolcanoes are the most common type. This is because Stratovolcanoes form at convergent plate boundaries, where two plates are 
+            moving into eachother, and this is the most common type of plate boundary, therefore there are a subsequently large amount of these types of 
+            volcanoes.
+          </p>
+        </div>
+        <div class="pure-u-10-24 chart-unit">
           <div id="vis6" class="chart"></div>
         </div>
+        <div class="pure-u-14-24 chart-unit text-unit">
+          <p>
+            The status of a volcano refers to when the last time the volcano was active. So a Historical status means it has been active in the last few thousand 
+            years, and a Radiocarbon status means it was active in the last 50,000 years.
+          </p>
+          <p>
+            The most common status of volcano is Holocene, with Historical volcanoes being very close in number. Holocene volcanoes have been active in the 
+            last 12,000 years, and Historical, the last few thousand. This is largely due to the fact that it is just easier to record volcanoes that are 
+            younger, as very old volcanoes that werent very large will have chnaged in shape, size, or even become extinct, and we may not be able to tell 
+            it was a volcano. Younger volcanoes have will be more likely to have the effects of their activity around for us to record.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Section: Summary / Trends -->
-    <section id="summary">
-      <h3>Summary & Trends</h3>
+
+    <section id="VEI">
+      <h3>How explosive are our volcanoes, and how often do they erupt?</h3>
       <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+        <div class="pure-u-1 chart-unit">
           <div id="vis7" class="chart"></div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 chart-unit">
+        <div class="pure-u-1 text-unit">
+          <p>
+            Volcanic Explosivity Index or VEI, is a scale that ranges from 0-8 that measures the size of explosive volcanic eruptions. The VEI number is determined 
+            by considering the eruptions cloud height, the volume of material ejected (called the Tephra), and intensity of an eruption. 
+          </p>
+          <p>
+            In the bubble timeline above, we can see the eruptions from the last 100 years, sorted by types of volcano. In this time we can see 2 main patterns: 
+            Stratovolcanoes have te most eruptions, which verifies the fact that most volcanoes are Stratovolcanoes, and that there were only 8 eruptions of VEI 5 
+            or higher in the last 100 years.
+          </p>
+          <p>
+            However if we look at the timeline below;
+          </p>
+        </div>
+        <div class="pure-u-1 chart-unit">
           <div id="vis8" class="chart"></div>
+        </div>
+        <div class="pure-u-1 text-unit">
+          <p>
+            We see that in the timeline of all recorded eruptions (or estimates from scientific study), that there are more than 50 eruptions with a VEI of 5 or 
+            more. The reason for this is down to two factors: Very large eruptions only occur over 50,000 year cycles, so we dont even see VEI 8 eruptions over 
+            this timeline. The second is that again, the older and smaller a volcano is, the harder it is to find evidence of its eruption.
+          </p>
         </div>
       </div>
     </section>
 
+
     <footer>
-      <p>This is a footer placeholder.</p>
+      <p>
+        Jesse Hodgson
+      </p>
+      <p>
+        19/10/2025
+      </p>
+      <p>
+        https://images.template.net/491727/Lava-Volcano-Clipart-edit-online.png - Link for background image
+      </p>
     </footer>
   </div>
 
+
   <script>
-    // placeholder Vega-Lite spec
     var main_map = {
       "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 1000,
-  "height": 600,
+  "width": "container",
+  "height": 500,
   "projection": {"type": "equalEarth"},
   "layer": [
     {
@@ -210,18 +318,17 @@
             ],
             "range": [
               "#FFD166",
-              "#EF476F",
+              "#FF8C00",
               "#118AB2",
               "#06D6A0",
               "#073B4C",
-              "#A65E44"
+              "#7F00FF"
             ]
           }
         }
       }
     },
     {
-      "title": {"text": "Locations of the World's Volcanoes", "fontSize": 20},
       "data": {
         "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv",
         "format": {"type": "csv"}
@@ -232,7 +339,8 @@
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "tooltip": [
           {"field": "Volcano Name", "type": "nominal"},
-          {"field": "Country", "type": "nominal"}
+          {"field": "Country", "type": "nominal"},
+          {"field": "Continent_Name", "type": "nominal"}
         ]
       }
     }
@@ -240,15 +348,332 @@
   "config": {"style": {"cell": {"stroke": "transparent"}}}
     };
 
+
+    var USA_map = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": 300,
+  "projection": {"type": "albersUsa"},
+  "title": {"text": "Number of Volcanoes per U.S. State", "fontSize": 12},
+  
+  "data": {
+    "url": "https://vega.github.io/vega-datasets/data/us-10m.json",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  
+  "transform": [
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/states_volcanoes_actual.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "FIPS Code",
+        "fields": ["State", "Volcano Number"]
+      }
+    }
+  ],
+  
+  "mark": {"type": "geoshape", "stroke": "white"},
+  
+  "encoding": {
+    "color": {
+      "condition": {
+        "test": "datum['Volcano Number'] == 0",
+        "value": "lightgrey"
+      },
+      "field": "Volcano Number",
+      "type": "quantitative",
+      "title": "Number of Volcanoes",
+      "scale": {"scheme": "blues"}
+    },
+    "tooltip": [
+      {"field": "State", "type": "nominal", "title": "State"},
+      {"field": "Volcano Number", "type": "quantitative", "title": "Volcanoes"}
+    ]
+  },
+  
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}
+
+
+    var volcano_density = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+      "description": "Scatterplot of volcano density (land area vs number of volcanoes).",
+      "width": "container",
+      "height": 300,
+      "title": {"text": "Volcano density of each country.","fontSize": 12},
+      "data": {
+        "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/main/Country-volcano%20density.csv",
+        "format": {"type": "csv"}
+      },
+      "width": "container",
+      "height": 250,
+      "mark": {"type": "circle", "size": 80, "opacity": 0.8},
+      "encoding": {
+        "x": {
+          "field": "Land Area (km²)",
+          "type": "quantitative",
+          "title": "Land Area (km²) - Logarithmic Scale",
+          "scale": {"type": "log"}
+        },
+        "y": {
+          "field": "Count of volcanoes",
+          "type": "quantitative",
+          "title": "Number of Volcanoes - Not Logarithmic",
+          "scale": {"nice": true}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Land Area (km²)", "type": "quantitative"},
+          {"field": "Count of volcanoes", "type": "quantitative"}
+        ]
+      }
+    }
+
+
+    var type_status = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {"url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv"},
+  "mark": "rect",
+  "width": "container",
+  "height": "500",
+  "encoding": {
+    "x": {"field": "Type", "type": "nominal"},
+    "y": {"field": "Status", "type": "nominal"},
+    "color": {"aggregate": "count", "title": "Number of Volcanoes"},
+    "tooltip": [
+      {"field": "Type"},
+      {"field": "Status"},
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Number of Volcanoes"
+      }
+    ]
+  },
+  "title": {"text": "Relationship Between the Type & Status of All Volcanoes", "fontsize": 12}
+}
+
+
+    var type_radial = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height":300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "field": "Type", "as": "VolcanoCount"}],
+      "groupby": ["Type"]
+    },
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "VolcanoCount", "order": "descending"}]
+    },
+    {
+      "calculate": "datum.rank <= 10 ? datum.Type : 'Other Types'",
+      "as": "TypeGroup"
+    },
+    {
+      "aggregate": [{"op": "sum", "field": "VolcanoCount", "as": "VolcanoCount"}],
+      "groupby": ["TypeGroup"]
+    }
+  ],
+  "mark": {"type": "arc", "innerRadius": 65},
+  "encoding": {
+    "theta": {
+      "field": "VolcanoCount",
+      "type": "quantitative",
+      "title": "Number of Volcanoes"
+    },
+    "color": {
+      "field": "TypeGroup",
+      "type": "nominal",
+      "title": "Volcano Type",
+      "scale": {"scheme": "category20"},
+      "sort": {"field": "VolcanoCount", "order": "descending"}
+    },
+    "order": {
+      "field": "VolcanoCount",
+      "type": "quantitative",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {"field": "TypeGroup", "type": "nominal", "title": "Volcano Type"},
+      {"field": "VolcanoCount", "type": "quantitative", "title": "Number of Volcanoes"}
+    ]
+  },
+  "view": {"stroke": null},
+  "title": {"text": "Top 10 Volcano Types (Grouped with 'Other Types')"}
+}
+
+
+    var status_radial = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcanoes%20around%20the%20world%20in%202021.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "field": "Status", "as": "VolcanoCount"}],
+      "groupby": ["Status"]
+    },
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "VolcanoCount", "order": "descending"}]
+    },
+    {
+      "calculate": "datum.rank <= 10 ? datum.Status : 'Other Statuses'",
+      "as": "StatusGroup"
+    },
+    {
+      "aggregate": [{"op": "sum", "field": "VolcanoCount", "as": "VolcanoCount"}],
+      "groupby": ["StatusGroup"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 65},
+      "encoding": {
+        "theta": {
+          "field": "VolcanoCount",
+          "type": "quantitative",
+          "title": "Number of Volcanoes"
+        },
+        "color": {
+          "field": "StatusGroup",
+          "type": "nominal",
+          "title": "Volcano Status",
+          "scale": {"scheme": "category20"},
+          "sort": {"field": "VolcanoCount", "order": "descending"}
+        },
+        "order": {
+          "field": "VolcanoCount",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {"field": "StatusGroup", "type": "nominal", "title": "Volcano Status"},
+          {"field": "VolcanoCount", "type": "quantitative", "title": "Number of Volcanoes"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "radius": 90,
+        "radius2": 125,
+        "stroke": "gray"
+      },
+      "encoding": {
+        "theta": {"field": "VolcanoCount", "type": "quantitative"},
+        "order": {"field": "VolcanoCount", "sort": "descending"}
+      }
+    }
+  ],
+  "view": {"stroke": null},
+  "title": {
+    "text": "Top 10 Volcano Statuses (Grouped with 'Other Statuses')",
+    "fontSize": 12
+  }
+}
+
+
+    var small_bubble = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {"text": "Explosivity of Each Type of Volcano's Eruption in the last 100 years","fontSize": 12},
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcano-events.csv"
+  },
+  "transform": [
+    {"filter": "datum.Year >= 1924"}
+  ],
+  "width": "container",
+  "height": 400,
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "axis": {"grid": true},
+      "scale": {"domain": [1924, 2024]}
+    },
+    "y": {"field": "Type", "type": "nominal", "axis": {"title": ""}},
+    "size": {
+      "field": "VEI",
+      "type": "quantitative",
+      "title": "Volcanic Explosivity Index",
+      "scale": {"type": "pow", "exponent": 3, "range": [10, 1500]}
+    },
+    "color": {"field": "Type", "type": "nominal", "legend": null},
+    "tooltip": [
+      {"field": "Name", "type": "nominal"},
+      {"field": "Country", "type": "nominal"},
+      {"field": "Year", "type": "nominal"},
+      {"field": "VEI", "type": "nominal"}
+    ]
+  }
+}
+
+
+    var all_bubble = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {"text": "Explosivity of Each Type of Volcano's Eruption over Recorded History","fontSize": 12},
+  "data": {
+    "url": "https://raw.githubusercontent.com/JesseHodgson/FIT3179-Vis2/refs/heads/main/volcano-events.csv"
+  },
+  "width": "container",
+  "height": 500,
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "axis": {"grid": true}
+    },
+    "y": {"field": "Type", "type": "nominal", "axis": {"title": ""}},
+    "size": {
+      "field": "VEI",
+      "type": "quantitative",
+      "title": "Volcanic Explosivity Index",
+      "scale": {"type": "pow", "exponent": 6, "range": [10, 1500]}
+    },
+    "color": {"field": "Type", "type": "nominal", "legend": null},
+    "tooltip": [
+      {"field": "Name", "type": "nominal"},
+      {"field": "Country", "type": "nominal"},
+      {"field": "Year", "type": "nominal"},
+      {"field": "VEI", "type": "nominal"}
+    ]
+  }
+}
+
+
     vegaEmbed('#vis1', main_map);
-    vegaEmbed('#vis2', placeholder);
-    vegaEmbed('#vis3', placeholder);
-    vegaEmbed('#vis4', placeholder);
-    vegaEmbed('#vis5', placeholder);
-    vegaEmbed('#vis6', placeholder);
-    vegaEmbed('#vis7', placeholder);
-    vegaEmbed('#vis8', placeholder);
+    vegaEmbed('#vis2', USA_map);
+    vegaEmbed('#vis3', volcano_density);
+    vegaEmbed('#vis4', type_status);
+    vegaEmbed('#vis5', type_radial);
+    vegaEmbed('#vis6', status_radial);
+    vegaEmbed('#vis7', small_bubble);
+    vegaEmbed('#vis8', all_bubble);
   </script>
 </body>
-
 </html>
